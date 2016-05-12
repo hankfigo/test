@@ -1,0 +1,35 @@
+2008-09-23 - Snort 2.8.3.1
+
+[*] Improvements
+    * Update rule latency thresholding.
+
+[*] Notes
+    * The flow and stream4 preprocessors will be deprecated in a
+      future release.
+
+
+2008-09-04 - Snort 2.8.3
+
+[*] New Additions
+    * New Feature for HTTP Inspect to split requests into 5 components -
+      Method, URI, Header (non-cookie), Cookies, Body.  Added HTTP server
+      specific configurations to normalize HTTP header and/or cookie buffers.
+      Provided content and PCRE modifiers to allow searches within one or
+      more of those individual buffers.  Added content modifier to allow rule
+      writer to specify content to be used for fast pattern matcher.
+      Updated dynamic rule API to allow searches within the new buffers.
+
+    * Support for MPLS decoding.
+
+    * New option to rule and preprocessor profiling configuration for
+      logging to file instead of syslog.
+
+[*] Improvements
+    * Update to fix compilation issue on HPUX machines related to rule and
+      preprocessor performance profiling.
+
+    * Update to correct the wording of IP datagram length being greater than
+      the captured length decoder alert.
+
+    * Update to correct logging issue when using 'ruletype' keyword.
+
