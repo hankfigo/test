@@ -19,7 +19,7 @@ configure-stamp:
 	touch configure-stamp
 
 build: build-arch build-indep
-	make -C $(CURDIR)/
+	make -C $(CURDIR)/snort-2.8.3.1/src
 
 build-arch: build-stamp
 
@@ -33,7 +33,7 @@ clean:
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp configure-stamp
-	make -C $(CURDIR)/ clean
+	make -C $(CURDIR)/snort-2.8.3.1/src clean
 	dh_clean
 
 install: build
@@ -43,8 +43,8 @@ install: build
 	dh_installdirs
 
 	# Add here commands to compile the package.
-	mkdir -p $(CURDIR)/debian/ssp-hello/usr/sbin/
-	install -m 0755 $(CURDIR)/hello $(CURDIR)/debian/ssp-hello/usr/sbin/
+	mkdir -p $(CURDIR)/debian/ssp-snort/usr/sbin/
+	install -m 0755 $(CURDIR)/src/snort $(CURDIR)/debian/ssp-snort/usr/sbin/
 
 # Build architecture-independent files here.
 binary-indep: build install

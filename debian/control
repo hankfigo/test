@@ -1,4 +1,4 @@
-Source: ssp-hello
+Source: ssp-snort
 Section: misc
 Priority: optional
 Maintainer: Li Li <lili@sw2.com>
@@ -6,7 +6,7 @@ Standards-Version: 3.9.5
 Build-Depends: debhelper (>> 7.0.0), tar, gzip, libssl-dev, libcurl-dev
 Homepage: http://sw2.com
 
-Package: ssp-hello
+Package: ssp-snort
 Architecture: any
-Depends: ${misc:Depends}openssl
-Description: Test hello
+Depends: 
+Description: Test snort
