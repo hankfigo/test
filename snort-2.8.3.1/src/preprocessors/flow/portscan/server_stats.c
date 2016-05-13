@@ -346,7 +346,7 @@ int server_stats_save(SERVER_STATS *ssp, char *filename)
 
     /* open this description, create it if necessary, always wait on
      * sync to disk w/ every write, only write */
-    fd = open(filename, O_CREAT|O_TRUNC|O_SYNC|O_WRONLY);
+    fd = open(filename, O_CREAT|O_TRUNC|O_SYNC|O_WRONLY, 0777);
 
     if(fd < 0)
     {
