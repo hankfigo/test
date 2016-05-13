@@ -3,10 +3,10 @@ Section: misc
 Priority: optional
 Maintainer: Li Li <lili@sw2.com>
 Standards-Version: 3.9.5
-Build-Depends: debhelper (>> 7.0.0), tar, gzip, libssl-dev, libcurl-dev
+Build-Depends:
 Homepage: http://sw2.com
 
 Package: ssp-snort
 Architecture: any
-Depends: 
+Depends: libpcap0.8,m4,flex,bison,pcre
 Description: Test snort
